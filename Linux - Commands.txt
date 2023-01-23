@@ -1,0 +1,269 @@
+*******Linux Commands******
+
+--> PWD : Present Working Directory
+
+--> ctrl+L : Screen Clear
+
+--> clear : Clear the Screen
+
+--> ls : list of folders --> specifies what are folders in it
+
+--> ctrl+c : exit from the shell (environment)
+
+--> exit : exit from the shell (environment)
+
+--> ll : to do long listing detailed information of the file and folder
+
+--> D : Represents directory
+
+--> -rwx : Represents file
+s
+
+--> Mkdir : To create Directory
+   Example : mkdir <name>
+
+--> Mkdir -p dir1/dir2/dir3 : To create Directory inside the directory
+   Example : Mkdir -p dir1/dir2/dir3
+
+--> up arrow : To get the older commands
+
+--> CD : To get inside the directory "Change Directory"
+   Example : CD <name>
+
+--> CD  : To come out of the directory 
+   Example : cd 
+
+--> CD - : To go to previous directory
+   Example : cd -
+
+--> CD space .. : To come out of the directory 
+   Example : cd ..
+cal 
+--> Touch : To create a empty file
+   Example : Touch <file name>
+
+--> : To create 10 files at a time
+   Example : touch file{1..10} 
+
+--> cat or more : To read the file
+   Example : cat <file name> or more <file name>
+ls
+
+--> : cat>dir1/dir2/dir3/dir4/<filename> 
+      Hello World -> data created in filename in dir4
+
+--> : Creating link : suppose having a directory aws in the directory i have file named file1
+      Example : ln -s file1 /root/clouds/aws-link    
+               Here : root is the user
+                    : clouds is another folder like aws 
+                    : aws-link is the link name for file1 in clouds folder
+               Now  : go to CD clouds
+                    : ll  ll -s
+                    : you will see the link created in the clouds folder
+              --cat <linkname>
+
+--> : vim : To edit the data inside the file 
+        Example : vim <file name>
+ 
+        i : Insert mode to edit file
+        Example : <Type> mkdfsojdkojaskdlkasdldaksldl(data)
+
+        ESC : To come out from edit mode or Insert Mode
+
+        wq : save & quit
+
+--> I (Capital I) : i want to go to starting of that line ,inside the file (data) if my cursor is at the end or middle  
+                    (make sure you are in ESC mode NOT in  insert mode while performing this operation)
+
+--> A (Capital A) : i want to go to END of the line ,inside the file (data) if my cursor is at the first or middle  
+                   (make sure you are in ESC mode NOT in insert mode while performing this operation)
+
+--> O (Capital O) : inserts a new line on top from a present line
+                   (make sure you are in ESC mode NOT in insert mode while performing this operation)
+
+--> o (small o) :  inserts a new line on down from a present line
+                   (make sure you are in ESC mode NOT in insert mode while performing this operation)
+
+--> Command Mode
+
+--> shift+g  :  cursor will move to bottom of the file inside the file
+
+--> gg  :  cursor will move to top of the file inside the file
+
+--> yy  :  to copy the single line inside the file
+
+--> P  :  to paste the copied line inside the file
+
+--> U  :  undo
+
+--> shift+:set num  : To set no. for the lines inside the file
+
+--> :83  : cursor will point to 83 line 
+
+--> / : to search particular word in a afile 
+    example : /today 
+
+--> visudo : to practise above commands
+
+--> ESC : To come out from edit mode or Insert Mode
+
+--> vi : To open the file & also to create the file and open
+   Example : vi <file name>
+
+--> i : Insert mode to edit file
+   Example : <Type> mkdfsojdkojaskdlkasdldaksldl(data)
+
+--> ESC : To come out from edit mode or Insert Mode
+
+--> :wq! : To write --> save & quit
+
+--> cp : coping data from one file to another file  
+   Example : cp file1 file2  -> what ever the data in file1 will copy to file2
+
+--> cp : copies the files from one directory to another directory
+   Example : cp /home/cloudera/<directoryname>/<filename>  /home/cloudera/<directoryname>/<filename> (Absolute path)
+
+--> rm : To remove the file in directory
+   Example : rm <filename>
+
+--> rm -f  : To remove the file in directory without permission
+   Example : rm -f <filename>
+
+--> rmdir : To delete the directory
+   Example : rmdir <directory name>
+
+--> rm -rf : To remove directory with file (recurssive remove)
+   Example : rm -rf <directoryname>
+
+--> rm -rf * : To delete all files 
+   Example   : rm -rf * <directoryname>
+
+--> rm -rf f* : To delete files name starts with F (recurssive remove)
+   Example    : rm -rf f* <directoryname>
+
+--> :q : only to quit with out saving the write
+
+--> ***********Absolute path************
+   Example : /home/cloudera/<directory>/<filename>
+
+--> *************Relative path**********
+   Example : mkdir <directoryname>
+
+--> : ls -al : list of hidden files
+
+--> TO insert data into file there are two way :
+
+1.Static way :  CAT
+                ECHO
+                SED
+
+2.Dynamic way : VIM
+                NANO
+
+  Static Example : Cat>file1 ex : file1 is a file name
+                   This is my file-1 (enter data)
+                   click -> Enter
+                   Ctrl+d Saves the file.
+
+--> : Cat>>file 1 ex : file1 is a file name
+                       click -> enter
+                       ctrl+d saves the file -> To add the data in the file without deleting older data in the file
+
+--> : echo "hello world" > file3 -> it will print the data and data is saved in file3
+                        -> "Hello World" is a data inside the file
+                        -> file3 is the file name
+
+--> : mv file1 file5 -> to change the file name from file1 to file 5
+
+--> : yum install tree -y  -> it will install the package 
+    : Tree -> display's the structure of the the directory ex : how many directories and files are exist
+
+--> : touch dir1/dir2/dir3/dir4/<filename> --> file will be created under dir4
+
+--> : vim -o file1 file2 --> differentiate between two files in horizontal view
+
+--> : vim -O(Captial O) file1 file2 --> differentiate between two files in vertical view
+
+--> : diff file1 file2 --> differentiate only data between two files 
+
+--> : :qa to come out of vim -O file3 file4 mode
+
+--> File Permissions
+
+--> -rw : - means regular file
+
+--> b : blocked file
+
+--> c : character file
+
+--> d : directory
+
+--> i : link file
+
+--> rw- : (rw-) first part USER   :6
+
+--> r-- : (r--) second part Group :4
+
+--> r-- : (r--) third part others :4
+
+--> : r : Read    : 4
+
+--> : W : Write   : 2
+
+--> : X : Execute : 1  (the file name shows in green when the permission are assigned as executabel)
+
+--> To give the permission to a file (first method)
+    Example [root@ip-172-31-28 ~]# chmod 765 file 1
+     7 -> user having read 4 write 2 execute 1 permissions total 7
+     6 --> user having read 4 write 2 permissions total 6
+     5 --> user having read 4 execute 1 permissions total 7
+
+--> To give the permission to a file (Second method)
+    Example [root@ip-172-31-28 ~]# chmod u=rwx,g=rx,o=rw file3
+
+--> Change the ownership of the file from root user to thiru
+    Example [root@ip-172-31-28 ~]# chown thiru file 1
+
+--> Change the ownership of the file from root group to thiru
+    Example [root@ip-172-31-28 ~]# chgrp thiru file 1
+
+--> To Change the ownership of the file from root User AND root group to thiru at a time for both 
+    Example [root@ip-172-31-28 ~]# chown thiru:thiru file 1
+
+--> : To print top 10 lines
+    Example : [root@.......~}# head file1 --> bydefault prints top 10 lines
+    Example : [root@.......~}# head -7 file1 --> will print top 7 lines
+
+--> : To print bottom 10 lines
+    Example : [root@.......~}# Tail file1 --> bydefault prints bottom 10 lines
+    Example : [root@.......~}# tail -6 file1 --> will print bottom 7 lines
+
+--> : encryption -> to encript the file 
+    Example : [root@.......~}# gpg -c file1 --> it will ask for password
+    passpharse ********
+    -> if you try to open the encrypt file, the file will open but content in the file will show different
+
+--> : TO Dcrypt --> To dcrypt encrypted file
+    Example : [root@.......~}# gpg -d file1.gpg
+
+--> : To count the words in the file
+   Example :  [root@...~]# WC file 1
+
+--> : To know the directory size 
+    Example :  [root@...~]# du -sh  -> it will display the size of the directory 
+               du -> stands for disk usuage
+
+--> : To know the file size 
+    Example :  [root@...~]# du -sh file1 -> it will display the size of the file
+               du -> stands for disk usuage
+
+
+
+
+
+
+
+
+
+
+ 
